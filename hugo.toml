@@ -1,0 +1,30 @@
+baseURL = 'https://mcbe.wtf/'
+languageCode = 'en-us'
+title = 'Minecraft Bedrock Speedrunning'
+theme = "minecraft"
+copyright = 'Copyright @2024 Minecraft Speedrunning.'
+
+[taxonomies]
+  tag = 'tags'
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "Rules"
+    name = "Rules"
+    url = "https://github.com/MCBE-Speedrunning/Speedrunning-Rulebook"
+    weight = 20
+  [[menu.main]]
+    identifier = "resources"
+    name = "Resources"
+    url = "/resources/"
+    weight = 30
+  [[menu.main]]
+    identifier = "moderation"
+    name = "Moderation"
+    url = "/moderation/"
+    weight = 40

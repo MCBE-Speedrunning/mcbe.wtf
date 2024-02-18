@@ -1,0 +1,49 @@
+:root {
+  --primary: #3d8a3d;
+  --primary-2: #aadb74;
+  --foreground: #eae9eb;
+  --background: #6a431f;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  line-height: 1.5;
+  margin: 1rem;
+  max-width: 768px;
+}
+
+header {
+  border-bottom: 1px solid var(--foreground);
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid var(--foreground);
+  margin-top: 1rem;
+}
+
+a {
+  color: var(--primary-2);
+}
+
+a:visited {
+  color: var(--primary);
+}
+
+nav {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  padding: 0px 8px;
+}
+
+nav ul li a {
+  display: inline;
+}
