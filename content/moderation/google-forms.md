@@ -11,23 +11,26 @@ to send the application to a discord channel
 ```js
 function onFormSubmit(e) {
   var discordPayload = {
-    content: 'New form submitted',
+    content: "New form submitted",
     embeds: [{
-      type: 'rich',
-      title: 'Form submission',
+      type: "rich",
+      title: "Form submission",
       color: 65392,
-      fields: []
-    }]
-  }
-  e.response.getItemResponses().forEach(function(i) {
-    var v = i.getResponse() || 'None'
-    discordPayload.embeds[0].fields.push({ name: i.getItem().getTitle(), value: v })
-  })
-  UrlFetchApp.fetch('https://discord.com/api/webhooks/$GUILD_ID/$WEBHOOK_ID', {
-    method: 'post',
+      fields: [],
+    }],
+  };
+  e.response.getItemResponses().forEach(function (i) {
+    var v = i.getResponse() || "None";
+    discordPayload.embeds[0].fields.push({
+      name: i.getItem().getTitle(),
+      value: v,
+    });
+  });
+  UrlFetchApp.fetch("https://discord.com/api/webhooks/", {
+    method: "post",
     payload: JSON.stringify(discordPayload),
-    contentType: 'application/json'
-  })
+    contentType: "application/json",
+  });
 }
 ```
 

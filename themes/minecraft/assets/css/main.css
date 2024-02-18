@@ -47,3 +47,12 @@ nav ul li {
 nav ul li a {
   display: inline;
 }
+
+.highlight {
+  overflow-x: auto;
+  width: fit-content;
+}
+
+.highlight pre {
+  padding: 8px;
+}
