@@ -50,9 +50,9 @@ nav ul li a {
 
 .highlight {
   overflow-x: auto;
-  width: fit-content;
 }
 
 .highlight pre {
+  width: fit-content;
   padding: 8px;
 }

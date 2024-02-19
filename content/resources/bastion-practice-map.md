@@ -26,3 +26,6 @@ Features
 - Stats
 - Game Appearances
 - Custom Spawns
+
+[The map has been made by
+lol869](https://www.speedrun.com/users/lol869).

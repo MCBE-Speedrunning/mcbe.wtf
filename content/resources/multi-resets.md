@@ -11,5 +11,5 @@ get a favourable spawn position.
 
 [Quick Setup Video Guide](https://youtu.be/W16rlDLTXfY)
 
-The tool has been developed by
-[lol869](https://www.speedrun.com/users/lol869).
+[The tool has been developed by
+lol869](https://www.speedrun.com/users/lol869).
