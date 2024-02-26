@@ -1,6 +1,5 @@
 +++
 title = 'Co-op End Practice'
-draft = true
 +++
 
 [Download v2.0](./End Practice 2.0.mcworld)
