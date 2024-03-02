@@ -1,8 +1,9 @@
 +++
 title = 'Co-op End Practice'
+summary = 'Practice the end'
 +++
 
-[Download v2.0](./End Practice 2.0.mcworld)
+[Download v2.0](<./End Practice 2.0.mcworld>)
 
 [Video Tutorial](https://youtu.be/7hVb8vvt8B8)
 
