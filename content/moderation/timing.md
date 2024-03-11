@@ -22,6 +22,13 @@ commonly used by moderators from various communities to retime runs. It
 works on youtube and google drive videos without the need to download
 them first.
 
+ezRetime
+--------
+
+[ezRetime](https://ezretime.glitch.me/) is a tool developed by
+[SprinkzMC](https://www.speedrun.com/users/SprinkzMC) moderator for
+quickly retiming runs.
+
 Youtube Manual
 --------------
 
