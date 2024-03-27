@@ -2,7 +2,6 @@
 title = 'One Cycle'
 summary = 'Beating the dragon the fast way'
 tags = ["practice", "strat"]
-draft = true
 +++
 
 During a speedrun it is best to kill the dragon as fast as possible.
