@@ -5,7 +5,7 @@ summary = 'Practice the end fight'
 tags = ["practice", "map"]
 +++
 
-[Download v1.1.2](./projlejs_End_practice_v1.1.2.mcworld)
+[Download v1.1.2](../projlejs_End_practice_v1.1.2.mcworld)
 
 Features
 - 3 modes of practice (Endfight, One cycle, Bed timing)

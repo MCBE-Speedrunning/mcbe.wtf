@@ -4,7 +4,7 @@ summary = 'Map used to practice bastions'
 tags = ["practice", "map"]
 +++
 
-[Download V1.1](/resources/Bastion_Practice_V1.1.mcworld)
+[Download V1.1](../Bastion_Practice_V1.1.mcworld)
 
 Changelog V1.1
 - Compatible with 1.16.0 and later
