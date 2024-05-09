@@ -4,6 +4,8 @@ summary = 'Map used to practice various speedrunning strategies'
 tags = ["practice", "map"]
 +++
 
+[Download V1.1](../Ophie_Map_V1.1.mcworld)
+
 This is OphieSR's 1.20+ Practice Map. I made it myself over the course
 of a year or two, and it is filled with hundreds of command blocks and
 redstone to make practicing speedruns easy. Here is what the map has (so
