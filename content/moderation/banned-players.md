@@ -103,4 +103,6 @@ Banned Players
 - [@ExeGuy2045](https://www.speedrun.com/users/ExeGuy2045) (Submitting another player's run as their own)
 - [@FiveThunder](https://www.speedrun.com/users/FiveThunder) (Cheating a run in MCBEUCE)
 - [@AWSAWS](https://www.speedrun.com/users/AWSAWS) (Spliced random seed run)
+- [@yomama123ppsuker](https://www.speedrun.com/users/yomama123ppsuker) (Spliced run)
+- [@scrotmtiklr](https://www.speedrun.com/users/scrotmtiklr) (Spliced run, alt of [@yomama123ppsuker](https://www.speedrun.com/users/yomama123ppsuker))
 
