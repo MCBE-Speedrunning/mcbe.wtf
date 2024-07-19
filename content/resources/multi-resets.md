@@ -9,7 +9,8 @@ tags = ["practice", "macro"]
 by windows players to generate many worlds many times over until they
 get a favourable spawn position.
 
-[Quick Setup Video Guide](https://youtu.be/W16rlDLTXfY)
+[Quick Setup Video Guide](https://youtu.be/VuCgpNpxA18) by 
+[Khalooody](https://www.speedrun.com/users/Khalooody).
 
 [The tool has been developed by
 lol869](https://www.speedrun.com/users/lol869).
