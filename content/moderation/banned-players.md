@@ -73,6 +73,7 @@ Banned Players
 - [@raider_plays](https://www.speedrun.com/users/raider_plays) (Stealing runs)
 - [@Tea](https://www.speedrun.com/users/Tea) and @Tusiky (Splicing an Enter Nether RS NS run, alts)
 - [@Bongolay](https://www.speedrun.com/users/Bongolay) (Speeding up video)
+- [@Wubba143](https://www.speedrun.com/users/Wubba143) (Alt of [@Bongolay](https://www.speedrun.com/users/Bongolay))
 - [@bastikadu](https://www.speedrun.com/users/bastikadu) (Splicing an Enter Nether RS NS run)
 - [@Danielisinthemi](https://www.speedrun.com/users/Danielisinthemi) (Splicing an RSG run)
 - [@Cutscences](https://www.speedrun.com/users/Cutscences) (Cheating in Unofficial CatExt)
