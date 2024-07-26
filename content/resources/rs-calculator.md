@@ -14,8 +14,8 @@ From To is Spawn Chunk
 The first 4 are just straight line directions (you have to go to those
 coordinates or further to unload the falling block when you die)
 
-The last 4 are diagonal coodinates (you have to go those coordinates or
-further to unload the falling block when u die)
+The last 4 are diagonal coordinates (you have to go to those coordinates
+or further to unload the falling block when u die)
 
 <form class="rs-calc">
     <label>
@@ -38,18 +38,18 @@ further to unload the falling block when u die)
     To Z: <span class="spawnToZ"></span>
     <br />
     <br />
-    Positive X: <span class="positiveX"></span>
-    Positive Z: <span class="positiveZ"></span>
+    ⬅️ : <span class="positiveX"></span>
+    ⬆️ : <span class="positiveZ"></span>
     <br />
-    Negative X: <span class="negativeX"></span>
-    Negative Z: <span class="negativeZ"></span>
+    ➡️ : <span class="negativeX"></span>
+    ⬇️ : <span class="negativeZ"></span>
     <br />
-    PosX PosZ: X: <span class="midPositiveX"></span> Z: <span class="midPositiveZ"></span>
+    ↖️ : X: <span class="midPositiveX"></span> Z: <span class="midPositiveZ"></span>
     <br />
-    PosX NegZ: X: <span class="midPositiveX"></span> Z: <span class="midNegativeZ"></span>
+    ↙️ : X: <span class="midPositiveX"></span> Z: <span class="midNegativeZ"></span>
     <br />
-    NegX NegZ: X: <span class="midNegativeX"></span> Z: <span class="midNegativeZ"></span>
+    ↘️ : X: <span class="midNegativeX"></span> Z: <span class="midNegativeZ"></span>
     <br />
-    NegX PosZ: X: <span class="midNegativeX"></span> Z: <span class="midPositiveZ"></span>
+    ↗️ : X: <span class="midNegativeX"></span> Z: <span class="midPositiveZ"></span>
 </details>
 </form>
