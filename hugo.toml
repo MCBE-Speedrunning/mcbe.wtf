@@ -28,3 +28,8 @@ copyright = 'Copyright @2024 Minecraft Speedrunning.'
     name = "Moderation"
     url = "/moderation/"
     weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
