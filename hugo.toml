@@ -16,7 +16,7 @@ copyright = 'Copyright @2024 Minecraft Speedrunning.'
   [[menu.main]]
     identifier = "Rules"
     name = "Rules"
-    url = "https://github.com/MCBE-Speedrunning/Speedrunning-Rulebook"
+    url = "/rules/"
     weight = 20
   [[menu.main]]
     identifier = "resources"
