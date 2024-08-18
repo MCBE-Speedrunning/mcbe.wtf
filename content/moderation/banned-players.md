@@ -109,4 +109,5 @@ Banned Players
 - [@Biomax](https://www.speedrun.com/users/Biomax) (Spliced run, alt of [@Darkmint](https://www.speedrun.com/users/Darkmint))
 - [@Darkmint](https://www.speedrun.com/users/Darkmint) (Spliced run on alt [@Biomax](https://www.speedrun.com/users/Biomax))
 - [@JadAlhussein](https://www.speedrun.com/users/JadAlhussein) (Spliced run)
+- [@Wicy](https://www.speedrun.com/users/Wicy) (Spliced obtain diamond run)
 
