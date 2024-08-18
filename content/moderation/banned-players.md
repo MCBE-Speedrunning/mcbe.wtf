@@ -108,4 +108,5 @@ Banned Players
 - [@scrotmtiklr](https://www.speedrun.com/users/scrotmtiklr) (Spliced run, alt of [@yomama123ppsuker](https://www.speedrun.com/users/yomama123ppsuker))
 - [@Biomax](https://www.speedrun.com/users/Biomax) (Spliced run, alt of [@Darkmint](https://www.speedrun.com/users/Darkmint))
 - [@Darkmint](https://www.speedrun.com/users/Darkmint) (Spliced run on alt [@Biomax](https://www.speedrun.com/users/Biomax))
+- [@JadAlhussein](https://www.speedrun.com/users/JadAlhussein) (Spliced run)
 
