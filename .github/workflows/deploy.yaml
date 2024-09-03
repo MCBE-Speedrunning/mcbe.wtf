@@ -38,7 +38,7 @@ jobs:
         run: |
           xbps-install -Syu || xbps-install -Syu xbps
           xbps-install -yu
-          xbps-install -y mmv-rs hugo git
+          xbps-install -y mmv-rs hugo git bash
       - name: Checkout
         id: checkout
         uses: classabbyamp/treeless-checkout-action@v1
