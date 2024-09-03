@@ -30,12 +30,15 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/void-linux/void-musl-full:latest
+    defaults:
+      run:
+        shell: sh
     steps:
       - name: Install build dependencies
         run: |
           xbps-install -Syu || xbps-install -Syu xbps
           xbps-install -yu
-          xbps-install -y mmv-rs hugo bash
+          xbps-install -y mmv-rs hugo
       - name: Checkout
         uses: actions/checkout@v4
         with:
