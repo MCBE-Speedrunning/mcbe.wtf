@@ -40,9 +40,11 @@ jobs:
           xbps-install -yu
           xbps-install -y mmv-rs hugo git
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
+        id: checkout
+        uses: classabbyamp/treeless-checkout-action@v1
+      - name: Get rules
+        run: |
+          git clone --depth=1 https://github.com/MCBE-Speedrunning/Speedrunning-Rulebook content/rules
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
