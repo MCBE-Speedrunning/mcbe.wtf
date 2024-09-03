@@ -38,7 +38,7 @@ jobs:
         run: |
           xbps-install -Syu || xbps-install -Syu xbps
           xbps-install -yu
-          xbps-install -y mmv-rs hugo
+          xbps-install -y mmv-rs hugo nodejs
       - name: Checkout
         uses: actions/checkout@v4
         with:
