@@ -1,3 +1,3 @@
 <h1>{{ site.Title }}</h1>
-<img src="/banner.png" height="50px" width="auto" />
+<img src="{{ .Site.BaseURL }}banner.png" height="50px" width="auto" />
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}

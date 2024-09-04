@@ -45,6 +45,7 @@ jobs:
       - name: Get rules
         run: |
           git clone --depth=1 https://github.com/MCBE-Speedrunning/Speedrunning-Rulebook content/rules
+          ./build.sh
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
