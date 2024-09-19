@@ -1,7 +1,7 @@
 +++
 title = 'Rules'
 summary = 'How to edit the rules'
-tags = ["git"]
+tags = ["moderation", "service"]
 +++
 
 Minecraft Bedrock Speedrunning moderation team keeps the rules in a git

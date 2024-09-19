@@ -1,7 +1,7 @@
 +++
 title = 'game-requests-serverless'
 summary = 'Handling incoming game requests'
-tags = ["form"]
+tags = ["service"]
 +++
 
 While not a part of Minecraft Bedrock Speedrunning, many of the bedrock

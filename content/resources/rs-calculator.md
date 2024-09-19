@@ -1,6 +1,7 @@
 +++
 title = 'Random Seed Calculator'
 summary = 'Know where to place sand, and also to know when to load the sand'
+tags = ["practice", "service"]
 +++
 
 <script defer src="../../rs-calc.js"></script>

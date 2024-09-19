@@ -1,7 +1,7 @@
 +++
 title = 'Google Forms'
 summary = 'How we use google forms'
-tags = ["form"]
+tags = ["service"]
 +++
 
 Over the years we have needed to make google forms for various reasons,

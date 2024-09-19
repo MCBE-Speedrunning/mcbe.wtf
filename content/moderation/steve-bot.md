@@ -1,7 +1,7 @@
 +++
 title = 'Steve'
 summary = 'In-house Discord Bot'
-tags = ["discord"]
+tags = ["service"]
 +++
 
 Steve is a discord bot developed by various members of the community

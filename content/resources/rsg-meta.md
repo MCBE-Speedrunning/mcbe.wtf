@@ -1,6 +1,7 @@
 +++
 title = 'MCBE RSG Strats and Meta for 1.16'
 summary = 'Strategies for running 1.16 Random Seed Glitchless'
+tags = ["practice", "strat"]
 +++
 
 [The article has been written by Danny15](https://www.speedrun.com/users/Danny15).

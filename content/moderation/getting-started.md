@@ -1,7 +1,7 @@
 +++
 title = 'Getting started'
 summary = 'Welcome to the moderator team'
-tags = ["start"]
+tags = ["moderation"]
 +++
 
 Welcome to the moderator team, glad to have you. If you made it this far

@@ -1,7 +1,7 @@
 +++
 title = 'Timing'
 summary = 'How to time a run'
-tags = ["retime"]
+tags = ["moderation", "service"]
 +++
 
 The most common task for every moderator is examining runs. Aside from

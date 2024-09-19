@@ -1,7 +1,7 @@
 +++
 title = 'Moderation Guidelines for Sensitive Investigations'
 summary = 'How to get into a proper dialog with a potential rule breaker'
-tags = ["rules"]
+tags = ["moderation"]
 +++
 
 This document aims to provide guidelines for what to do in the case of a

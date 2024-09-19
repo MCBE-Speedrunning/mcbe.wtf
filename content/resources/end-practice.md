@@ -1,6 +1,7 @@
 +++
 title = 'Co-op End Practice'
 summary = 'Practice the end'
+tags = ["practice", "map"]
 +++
 
 [Download v2.0](<../End Practice 2.0.mcworld>)

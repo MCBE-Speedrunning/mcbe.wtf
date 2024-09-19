@@ -1,7 +1,7 @@
 +++
 title = 'Minecraft: Bedrock Edition Unofficial Category Extensions'
 summary = 'Extra categories'
-tags = []
+tags = ["leaderboard"]
 +++
 
 Minecraft: Bedrock Edition Unofficial Category Extensions (MCBEUCE for
