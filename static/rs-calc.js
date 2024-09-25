@@ -61,12 +61,87 @@ function calculateCoordinates(spawnX, spawnZ) {
   };
 }
 
+class McbeCalculatorRsElement extends HTMLDetailsElement {
+  static tagName = "mcbe-calculator-rs";
+  static spawnNumberXName = "spawn-x-number";
+  static spawnNumberZName = "spawn-z-number";
+  static observedAttributes = [
+    McbeCalculatorRsElement.spawnNumberXName,
+    McbeCalculatorRsElement.spawnNumberZName,
+  ];
+  /** @type ShadowRoot */
+  #shadow;
+
+  constructor() {
+    // Always call super first in constructor
+    debugger
+    super();
+  }
+
+  connectedCallback() {
+    debugger
+    this.#shadow = this.attachShadow({ mode: "open" });
+    this.render();
+  }
+
+  /**
+   * @param {string} name
+   * @param {string} oldValue
+   * @param {string} newValue
+   * @returns void
+   */
+  attributeChangedCallback(name, oldValue, newValue) {
+    debugger
+    this.render();
+  }
+
+  /**
+   * @returns void
+   */
+  render() {
+    const spawnNumberX = parseFloat(
+      this.getAttribute(McbeCalculatorRsElement.spawnNumberXName),
+    );
+    const spawnNumberZ = parseFloat(
+      this.getAttribute(McbeCalculatorRsElement.spawnNumberZName),
+    );
+    const result = calculateCoordinates(spawnNumberX, spawnNumberZ);
+    this.#shadow.innerHTML = `<details>
+    <summary>Results</summary>
+    From X: ${result.spawnX}
+    From Z: ${result.spawnZ}
+    To X: ${result.spawnToX}
+    To Z: ${result.spawnToZ}
+    <br />
+    <br />
+    ⬅️ : ${result.positiveX}
+    ⬆️ : ${result.positiveZ}
+    <br />
+    ➡️ : ${result.negativeX}
+    ⬇️ : ${result.negativeZ}
+    <br />
+    ↖️ : X: ${result.midPositiveX} Z: ${result.midPositiveZ}
+    <br />
+    ↙️ : X: ${result.midPositiveX} Z: ${result.midNegativeZ}
+    <br />
+    ↘️ : X: ${result.midNegativeX} Z: ${result.midNegativeZ}
+    <br />
+    ↗️ : X: ${result.midNegativeX} Z: ${result.midPositiveZ}
+</details>`;
+  }
+}
+
+customElements.define(McbeCalculatorRsElement.tagName, McbeCalculatorRsElement, {
+  extends: "div",
+});
+
 /** @type {NodeListOf<HTMLFormElement>} */
 const forms = document.querySelectorAll("form.rs-calc");
 
 if (!forms.length) throw new Error("Form not found");
-
-forms.forEach((e) =>
+forms.forEach((e) => {
+  const calc = document.createElement(McbeCalculatorRsElement.tagName);
+  e.appendChild(calc);
   e.addEventListener("submit", (e) => {
     e.preventDefault();
     /** @type {HTMLFormElement} */
@@ -77,55 +152,9 @@ forms.forEach((e) =>
     const spawnX = data.get("spawn-x");
     const spawnZ = data.get("spawn-z");
 
-    const spawnXNumber = Number(spawnX);
-    const spawnZNumber = Number(spawnZ);
+    const calc = form.querySelector(McbeCalculatorRsElement.tagName);
 
-    const result = calculateCoordinates(spawnXNumber, spawnZNumber);
-
-    form
-      .querySelectorAll(".spawnX")
-      .forEach((e) => (e.innerText = result.spawnX));
-    form
-      .querySelectorAll(".spawnZ")
-      .forEach((e) => (e.innerText = result.spawnZ));
-
-    form
-      .querySelectorAll(".positiveX")
-      .forEach((e) => (e.innerText = result.positiveX));
-    form
-      .querySelectorAll(".positiveZ")
-      .forEach((e) => (e.innerText = result.positiveZ));
-
-    form
-      .querySelectorAll(".negativeX")
-      .forEach((e) => (e.innerText = result.negativeX));
-    form
-      .querySelectorAll(".negativeZ")
-      .forEach((e) => (e.innerText = result.negativeZ));
-
-    form
-      .querySelectorAll(".midPositiveX")
-      .forEach((e) => (e.innerText = result.midPositiveX));
-    form
-      .querySelectorAll(".midPositiveZ")
-      .forEach((e) => (e.innerText = result.midPositiveZ));
-
-    form
-      .querySelectorAll(".midNegativeX")
-      .forEach((e) => (e.innerText = result.midNegativeX));
-    form
-      .querySelectorAll(".midNegativeZ")
-      .forEach((e) => (e.innerText = result.midNegativeZ));
-
-    form
-      .querySelectorAll(".spawnToX")
-      .forEach((e) => (e.innerText = result.spawnToX));
-    form
-      .querySelectorAll(".spawnToZ")
-      .forEach((e) => (e.innerText = result.spawnToZ));
-
-    form
-      .querySelectorAll("details")
-      .forEach((e) => (e.open = true));
-  }),
-);
+    calc.setAttribute(McbeCalculatorRsElement.spawnNumberXName, spawnX);
+    calc.setAttribute(McbeCalculatorRsElement.spawnNumberZName, spawnZ);
+  });
+});
