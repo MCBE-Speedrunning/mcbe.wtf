@@ -110,4 +110,5 @@ Banned Players
 - [@Darkmint](https://www.speedrun.com/users/Darkmint) (Spliced run on alt [@Biomax](https://www.speedrun.com/users/Biomax))
 - [@JadAlhussein](https://www.speedrun.com/users/JadAlhussein) (Spliced run)
 - [@Wicy](https://www.speedrun.com/users/Wicy) (Spliced obtain diamond run)
+- [@SimenSam](https://www.speedrun.com/users/SimenSam) (Stolen run from [@kobra](https://www.speedrun.com/users/kobra))
 
