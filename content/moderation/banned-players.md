@@ -22,6 +22,7 @@ Players Worthy of Doubt
 - [@Noobnubboi](https://www.speedrun.com/users/Noobnubboi) (Potential splicing) This run
 - [@IGS_BrixTzy](https://www.speedrun.com/users/IGS_BrixTzy) (Constant alting)
 - [@Kelvinyau](https://www.speedrun.com/users/Kelvinyau) (Potential fake SSG world record)
+- [@HaydenCoolBoi](https://www.speedrun.com/users/HaydenCoolBoi) (Suspicious runs in random seed categories)
 
 Banned Players
 
