@@ -113,5 +113,5 @@ Banned Players
 - [@Wicy](https://www.speedrun.com/users/Wicy) (Spliced obtain diamond run)
 - [@SimenSam](https://www.speedrun.com/users/SimenSam) (Stolen run from [@kobra](https://www.speedrun.com/users/kobra))
 - [@GabLiterallyCrazy](https://www.speedrun.com/users/GabLiterallyCrazy) (Spliced runs)
-- [@HarubouRTA](https://www.speedrun.com/users/HarubouRTA) (Spliced Any% Glitchless run)
+- [@HarubouRTA](https://www.speedrun.com/users/HarubouRTA) (Spliced RSG run)
 
