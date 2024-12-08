@@ -1,3 +1,7 @@
 public/
 content/rules
 .hugo_build.lock
+node_modules
+themes/minecraft/assets/designsystemet-css/
+themes/minecraft/assets/designsystemet-minecraft/
+themes/minecraft/design-tokens/

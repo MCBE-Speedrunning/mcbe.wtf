@@ -6,8 +6,7 @@ tags = ["practice", "service"]
 
 <noscript>
  For the calculator to work it is necessary to enable JavaScript.
- Here are the <a href="https://www.enable-javascript.com/">
- instructions how to enable JavaScript in your web browser</a>.
+ Here are the [instructions how to enable JavaScript in your web browser](https://www.enable-javascript.com/).
 </noscript>
 From To is Spawn Chunk
 

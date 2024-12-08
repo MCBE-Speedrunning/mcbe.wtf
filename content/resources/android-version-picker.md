@@ -33,12 +33,12 @@ that without the help of Mojang you won't be able to play that version.
 ## List
 
 <noscript>
- For the list to work it is necessary to enable JavaScript.
- Here are the <a href="https://www.enable-javascript.com/">
- instructions how to enable JavaScript in your web browser</a>.
+  For the list to work it is necessary to enable JavaScript. Here are
+  the [instructions how to enable JavaScript in your web
+  browser](https://www.enable-javascript.com/).
 
-In addition, [the list is available in a computer readable format
-here](/android-versions-playstore.json).
+  In addition, [the list is available in a computer readable format
+  here](/android-versions-playstore.json).
 </noscript>
 
 <mcbe-android-version-picker />
