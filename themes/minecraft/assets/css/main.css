@@ -1,51 +1,65 @@
-:root {
-  --primary: #3d8a3d;
-  --primary-2: #aadb74;
-  --foreground: #eae9eb;
-  --background: #6a431f;
+html[data-color-scheme="dark"] {
+  --ds-color-brand3-border-subtle: #6a431f;
+  --ds-color-accent-text-subtle: #aadb74;
+  background-color: var(--ds-color-brand3-border-subtle);
+}
+
+html[data-color-scheme="dark"] body {
+  background-color: var(--ds-color-brand3-border-subtle);
+}
+
+html {
+  background-color: var(--ds-color-brand3-background-subtle);
+  scroll-behavior: smooth;
+}
+
+html body {
+  background-color: var(--ds-color-brand3-background-subtle);
 }
 
 body {
-  color: var(--foreground);
-  background-color: var(--background);
   line-height: 1.5;
   margin: 1rem;
+}
+
+main {
   max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
-  border-bottom: 1px solid var(--foreground);
+  border-bottom: 1px solid var(--ds-color-neutral-border-strong);
   margin-bottom: 1rem;
 }
 
 footer {
-  border-top: 1px solid var(--foreground);
+  border-top: 1px solid var(--ds-color-neutral-border-strong);
   margin-top: 1rem;
 }
 
-a {
-  color: var(--primary-2);
+.mcbe-navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
-a:visited {
-  color: var(--primary);
-}
-
-nav {
-  display: block;
-}
-
-nav ul {
+.mcbe-navbar ul {
   list-style: none;
 }
 
-nav ul li {
+.mcbe-navbar ul li {
   display: inline;
   padding: 0px 8px;
 }
 
-nav ul li a {
+.mcbe-navbar ul li a {
   display: inline;
+}
+
+.mcbe-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-spacing-2);
 }
 
 .highlight {
@@ -55,4 +69,53 @@ nav ul li a {
 .highlight pre {
   width: fit-content;
   padding: 8px;
+}
+
+.rs-calc {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--ds-spacing-4);
+  gap: var(--ds-spacing-4);
+}
+
+.mcbe-content {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-top: var(--ds-spacing-4);
+    margin-bottom: var(--ds-spacing-4);
+  }
+}
+
+/* This is really only targeting the heading on the homepage of the rules repo,
+ * which shouldn't be concerned (too much) with styling */
+.mcbe-content h1[align="center"] {
+  font-size: var(--ds-heading-xl-font-size);
+  font-weight: var(--ds-heading-xl-font-weight);
+  letter-spacing: var(--ds-heading-xl-letter-spacing);
+  line-height: var(--ds-heading-xl-line-height);
+}
+
+.mcbe-site-title {
+  margin-bottom: var(--ds-spacing-2);
+}
+
+mcbe-theme-switch div {
+  margin-top: var(--ds-spacing-4);
+  .ds-button {
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcbe-banner-title {
+    display: none;
+  }
+  .mcbe-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 }

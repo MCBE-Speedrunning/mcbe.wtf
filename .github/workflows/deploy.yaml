@@ -38,13 +38,14 @@ jobs:
         run: |
           xbps-install -Syu || xbps-install -Syu xbps
           xbps-install -yu
-          xbps-install -y mmv-rs hugo git bash
+          xbps-install -y mmv-rs hugo git bash pnpm
       - name: Checkout
         id: checkout
         uses: classabbyamp/treeless-checkout-action@v1
       - name: Get rules
         run: |
           git clone --depth=1 https://github.com/MCBE-Speedrunning/Speedrunning-Rulebook content/rules
+          ./prep.sh
           ./build.sh
       - name: Setup Pages
         id: pages

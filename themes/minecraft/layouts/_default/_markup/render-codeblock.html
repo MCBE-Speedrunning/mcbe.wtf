@@ -1,0 +1,3 @@
+<mcbe-copy-code data-code="{{ .Inner }}"></mcbe-copy-code>
+{{ $result := transform.HighlightCodeBlock . }}
+{{ $result.Wrapped }}

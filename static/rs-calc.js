@@ -69,8 +69,8 @@ class McbeCalculatorRsElement extends HTMLElement {
     McbeCalculatorRsElement.spawnNumberXName,
     McbeCalculatorRsElement.spawnNumberZName,
   ]);
-  /** @type ShadowRoot */
-  #shadow;
+  /** @type HTMLElement */
+  #root;
   /** @type HTMLDetailsElement */
   #details;
   /** @type HTMLStyleElement */
@@ -81,11 +81,13 @@ class McbeCalculatorRsElement extends HTMLElement {
   }
 
   connectedCallback() {
-    this.#shadow = this.attachShadow({ mode: "open" });
+    this.#root = this;
     this.#styles = document.createElement("style");
     this.#details = document.createElement("details");
-    this.#shadow.appendChild(this.#styles);
-    this.#shadow.appendChild(this.#details);
+    this.#details.className = "ds-details";
+    this.#details.dataset.color = "accent";
+    this.#root.appendChild(this.#styles);
+    this.#root.appendChild(this.#details);
     this.#details.open = true;
     this.#styles.innerHTML = `p {
   margin-top: 0;
