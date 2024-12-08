@@ -1,15 +1,17 @@
+/// <reference lib="dom" />
+
 /** @typedef {Object} PlayStoreCodes
  * @property {string?} armeabi-v7a
  * @property {string?} arm64-v8a
  * @property {string?} x86
  * @property {string?} x86_64
- **/
+ */
 
 /** @typedef {Object} PlayStoreVersion
  * @property {string} version_name
  * @property {PlayStoreCodes} codes
  * @property {boolean?} beta
- **/
+ */
 
 class McbeAndroidVersionPickerElement extends HTMLElement {
   static tagName = /** @type {const} */ ("mcbe-android-version-picker");
@@ -47,14 +49,15 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
   }
 
   connectedCallback() {
-    if (!this.#playStoreVersions)
+    if (!this.#playStoreVersions) {
       fetch("/android-versions-playstore.json")
         .then((res) => {
           if (res.ok) return res.json();
-          else
+          else {
             throw new Error(
               "Couldn't get version list. Status code: " + res.status,
             );
+          }
         })
         .then((res) => {
           this.#playStoreVersions = res;
@@ -68,6 +71,7 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
             McbeAndroidVersionPickerElement.#fetchStatusEnum.FAILED;
           this.#renderList();
         });
+    }
     this.#shadow = this.attachShadow({ mode: "open" });
     this.#styles = document.createElement("style");
     this.#versionListElement = document.createElement("div");
@@ -117,38 +121,55 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
     );
   }
 
-  /** @param {string} textFilter
+  /**
+   * @param {string} textFilter
    * @param {boolean} includeBetaVersions
-   * */
+   */
   #getList(textFilter, includeBetaVersions) {
     switch (this.#fetchStatus) {
       case McbeAndroidVersionPickerElement.#fetchStatusEnum.LOADING:
         return `<p>Loading...</p>`;
       case McbeAndroidVersionPickerElement.#fetchStatusEnum.FAILED:
         return `<p>An error has occured. Please try again later</p>`;
-      case McbeAndroidVersionPickerElement.#fetchStatusEnum.SUCCESS:
+      case McbeAndroidVersionPickerElement.#fetchStatusEnum.SUCCESS: {
+        const list = this.#playStoreVersions.filter((s) => {
+          const textMatch = s.version_name.startsWith(textFilter.toLowerCase());
+          const betaFilter = includeBetaVersions ? true : !(s.beta ?? false);
+          return textMatch && betaFilter;
+        });
+        const groupedByMajorMinor = Object.groupBy(list, (i) => {
+          const [major, minor] = i.version_name.split(".");
+          return `${major}.${minor}`;
+        });
         return `
-          ${this.#playStoreVersions
-            .filter((s) => {
-              const textMatch = s.version_name.includes(
-                textFilter.toLowerCase(),
-              );
-              const betaFilter = includeBetaVersions
-                ? true
-                : !(s.beta ?? false);
-              return textMatch && betaFilter;
-            })
+          ${Object.entries(groupedByMajorMinor)
             .map(
-              (p) => `
-                <h3>${p.version_name}</h3>
-                <p>${p.beta ? "Beta version" : ""}</p>
-                <ul>
-                  ${Object.entries(p.codes)
-                    .map(([arch, version]) => `<li>${arch}: ${version}</li>`)
+              ([titleVersion, versions]) => `
+                <details${
+                  Object.keys(groupedByMajorMinor).length === 1 ? " open" : ""
+                }>
+                  <summary>${titleVersion}</summary>
+                  ${versions
+                    .map(
+                      (p) => `
+                        <h3>${p.version_name}</h3>
+                        <p>${p.beta ? "Beta version" : ""}</p>
+                        <ul>
+                          ${Object.entries(p.codes)
+                            .map(
+                              ([arch, version]) =>
+                                `<li>${arch}: ${version}</li>`,
+                            )
+                            .join("")}
+                        </ul>
+                  `,
+                    )
                     .join("")}
-                </ul>`,
+                </details>
+                `,
             )
             .join("")}`;
+      }
     }
   }
 
