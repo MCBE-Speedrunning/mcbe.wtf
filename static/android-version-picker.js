@@ -31,8 +31,8 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
   };
   /** @type {number} */
   #fetchStatus = McbeAndroidVersionPickerElement.#fetchStatusEnum.LOADING;
-  /** @type ShadowRoot */
-  #shadow;
+  /** @type Element */
+  #root;
   /** @type HTMLStyleElement */
   #styles;
   /** @type HTMLDivElement */
@@ -72,35 +72,54 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
           this.#renderList();
         });
     }
-    this.#shadow = this.attachShadow({ mode: "open" });
+    // this.#root = this.attachShadow({ mode: "open" });
+    this.#root = this;
     this.#styles = document.createElement("style");
     this.#versionListElement = document.createElement("div");
+    const fieldset = document.createElement("fieldset");
+    const inputField = document.createElement("div");
+    const betaToggleField = document.createElement("div");
+    const legend = document.createElement("legend");
     this.#inputElement = document.createElement("input");
     this.#betaToggleElement = document.createElement("input");
     const inputLabel = document.createElement("label");
     const betaToggleLabel = document.createElement("label");
 
+    legend.innerText = "Filter settings";
+    legend.className = "ds-label";
+    fieldset.className = "ds-fieldset";
+    inputField.className = "ds-field";
+    betaToggleField.className = "ds-field";
     inputLabel.innerText = "Filter version";
     betaToggleLabel.innerText = "Include beta versions?";
     inputLabel.htmlFor = "input-element";
+    inputLabel.className = "ds-label";
+    betaToggleLabel.className = "ds-label";
     this.#inputElement.id = "input-element";
+    this.#inputElement.className = "ds-input";
+    this.#betaToggleElement.className = "ds-input";
+    this.#betaToggleElement.role = "switch";
     this.#inputElement.placeholder = "1.2.13";
     betaToggleLabel.htmlFor = "beta-toggle";
     this.#betaToggleElement.id = "beta-toggle";
     this.#betaToggleElement.type = "checkbox";
 
-    this.#shadow.appendChild(this.#styles);
-    this.#shadow.appendChild(inputLabel);
-    this.#shadow.appendChild(this.#inputElement);
-    this.#shadow.appendChild(betaToggleLabel);
-    this.#shadow.appendChild(this.#betaToggleElement);
-    this.#shadow.appendChild(this.#versionListElement);
+    this.#root.appendChild(this.#styles);
+    inputField.appendChild(inputLabel);
+    inputField.appendChild(this.#inputElement);
+    betaToggleField.appendChild(this.#betaToggleElement);
+    betaToggleField.appendChild(betaToggleLabel);
+    fieldset.appendChild(legend);
+    fieldset.appendChild(inputField);
+    fieldset.appendChild(betaToggleField);
+    this.#root.appendChild(fieldset);
+    this.#root.appendChild(this.#versionListElement);
     this.#styles.innerHTML = `
-      p {
+      ${McbeAndroidVersionPickerElement.tagName} p {
         margin-top: 0;
         margin-bottom: 0;
       }
-      label {
+      ${McbeAndroidVersionPickerElement.tagName} label {
         display: block;
       }
     `;
