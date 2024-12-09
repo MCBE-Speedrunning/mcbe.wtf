@@ -119,6 +119,9 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
         margin-top: 0;
         margin-bottom: 0;
       }
+      ${McbeAndroidVersionPickerElement.tagName} fieldset {
+        margin-bottom: 16px;
+      }
       ${McbeAndroidVersionPickerElement.tagName} label {
         display: block;
       }

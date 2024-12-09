@@ -3,52 +3,73 @@ class McbeThemeSwitchElement extends HTMLElement {
   static #themeKey = "mcbe-theme";
   static #lightTheme = "light";
   static #darkTheme = "dark";
+  static #contrastTheme = "contrast";
   /** @type HTMLInputElement */
-  #themeToggleElement;
+  #toggleGroupElement;
+  /** @type HTMLButtonElement[] */
+  #colorSchemeButtons = [];
 
   constructor() {
     super();
   }
 
   connectedCallback() {
-    this.#themeToggleElement = document.createElement("input");
-    this.#themeToggleElement.className = "ds-input";
-    this.#themeToggleElement.role = "switch";
-    this.#themeToggleElement.id = "theme-toggle";
-    this.#themeToggleElement.type = "checkbox";
+    this.#toggleGroupElement = document.createElement("div");
+    this.#toggleGroupElement.className = "ds-togglegroup";
+    this.#toggleGroupElement.role = "radiogroup";
+    this.#toggleGroupElement.tabIndex = "-1";
+
     const theme = McbeThemeSwitchElement.#getThemeFromStorage();
-    this.#themeToggleElement.checked =
-      theme === McbeThemeSwitchElement.#darkTheme;
     localStorage.setItem(McbeThemeSwitchElement.#themeKey, theme);
     document.querySelector("html").dataset.colorScheme = theme;
 
-    this.appendChild(this.#themeToggleElement);
-    this.#themeToggleElement.addEventListener(
-      "change",
-      this.#toggleTheme.bind(this),
-    );
+    for (const colorScheme of [
+      McbeThemeSwitchElement.#lightTheme,
+      McbeThemeSwitchElement.#darkTheme,
+      // Contrast has been disabled for now
+      // https://github.com/digdir/designsystemet/pull/2827
+      // McbeThemeSwitchElement.#contrastTheme,
+    ]) {
+      const btn = document.createElement("button");
+      btn.className = "ds-button";
+      btn.dataset.value = colorScheme;
+      btn.dataset.variant = colorScheme === theme ? "primary" : "tertiary";
+      btn.textContent = colorScheme;
+      btn.addEventListener("click", this.#changeTheme.bind(this));
+      this.#colorSchemeButtons.push(btn);
+      this.#toggleGroupElement.appendChild(btn);
+    }
+
+    this.appendChild(this.#toggleGroupElement);
   }
 
   disconnectedCallback() {
-    this.#themeToggleElement.removeEventListener(
-      "change",
-      this.#toggleTheme.bind(this),
+    this.#colorSchemeButtons.forEach((btn) =>
+      btn.addEventListener("click", this.#changeTheme.bind(this)),
     );
   }
 
-  #toggleTheme() {
-    const theme = this.#themeToggleElement.checked
-      ? McbeThemeSwitchElement.#darkTheme
-      : McbeThemeSwitchElement.#lightTheme;
+  /**
+   * @param {MouseEvent} event
+   */
+  #changeTheme(event) {
+    const theme = event.target.dataset.value;
     document.querySelector("html").dataset.colorScheme = theme;
+    this.#colorSchemeButtons.forEach(
+      (btn) =>
+        (btn.dataset.variant =
+          btn.dataset.value === theme ? "primary" : "tertiary"),
+    );
     localStorage.setItem(McbeThemeSwitchElement.#themeKey, theme);
   }
 
   static #getThemeFromStorage() {
-    return (localStorage.getItem(McbeThemeSwitchElement.#themeKey) ??
-      window.matchMedia("(prefers-color-scheme: dark)"))
-      ? McbeThemeSwitchElement.#darkTheme
-      : McbeThemeSwitchElement.#lightTheme;
+    return (
+      localStorage.getItem(McbeThemeSwitchElement.#themeKey) ??
+      (window.matchMedia("(prefers-color-scheme: dark)")
+        ? McbeThemeSwitchElement.#darkTheme
+        : McbeThemeSwitchElement.#lightTheme)
+    );
   }
 }
 

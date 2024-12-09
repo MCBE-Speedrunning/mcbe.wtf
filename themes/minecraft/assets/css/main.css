@@ -63,3 +63,10 @@ nav ul li a {
   width: fit-content;
   padding: 8px;
 }
+
+mcbe-theme-switch div {
+  margin-top: 16px;
+  .ds-button {
+    text-transform: capitalize;
+  }
+}
