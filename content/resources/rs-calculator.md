@@ -17,15 +17,15 @@ The last 4 are diagonal coordinates (you have to go to those coordinates
 or further to unload the falling block when u die)
 
 <form class="rs-calc">
-    <label>
+    <label class="ds-label">
         Spawn X:
-        <input type="number" name="spawn-x" />
+        <input type="number" name="spawn-x" class="ds-input" />
     </label>
-    <label>
+    <label class="ds-label">
         Spawn Z:
-        <input type="number" name="spawn-z" />
+        <input type="number" name="spawn-z" class="ds-input" />
     </label>
-    <button type="submit">
+    <button type="submit" class="ds-button">
         Calculate
     </button>
 </form>

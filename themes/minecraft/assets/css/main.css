@@ -1,10 +1,3 @@
-:root {
-  --primary: #3d8a3d;
-  --primary-2: #aadb74;
-  --foreground: #eae9eb;
-  --background: #6a431f;
-}
-
 html[data-color-scheme="dark"] {
   background-color: var(--ds-color-brand3-border-subtle);
 }
@@ -29,12 +22,12 @@ body {
 }
 
 header {
-  border-bottom: 1px solid var(--foreground);
+  border-bottom: 1px solid var(--ds-color-neutral-border-strong);
   margin-bottom: 1rem;
 }
 
 footer {
-  border-top: 1px solid var(--foreground);
+  border-top: 1px solid var(--ds-color-neutral-border-strong);
   margin-top: 1rem;
 }
 
@@ -64,8 +57,15 @@ nav ul li a {
   padding: 8px;
 }
 
+.rs-calc {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--ds-spacing-4);
+  gap: var(--ds-spacing-4);
+}
+
 mcbe-theme-switch div {
-  margin-top: 16px;
+  margin-top: var(--ds-spacing-4);
   .ds-button {
     text-transform: capitalize;
   }
