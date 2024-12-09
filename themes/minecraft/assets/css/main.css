@@ -5,9 +5,24 @@
   --background: #6a431f;
 }
 
+html[data-color-scheme="dark"] {
+  background-color: var(--ds-color-brand3-border-subtle);
+}
+
+html[data-color-scheme="dark"] body {
+  background-color: var(--ds-color-brand3-border-subtle);
+}
+
+html {
+  background-color: var(--ds-color-brand3-background-subtle);
+  scroll-behavior: smooth;
+}
+
+html body {
+  background-color: var(--ds-color-brand3-background-subtle);
+}
+
 body {
-  /* color: var(--foreground); */
-  /* background-color: var(--background); */
   line-height: 1.5;
   margin: 1rem;
   max-width: 768px;
@@ -22,14 +37,6 @@ footer {
   border-top: 1px solid var(--foreground);
   margin-top: 1rem;
 }
-
-/* a { */
-/*   color: var(--primary-2); */
-/* } */
-
-/* a:visited { */
-/*   color: var(--primary); */
-/* } */
 
 nav {
   display: block;

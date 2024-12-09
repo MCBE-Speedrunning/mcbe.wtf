@@ -1,0 +1,22 @@
+{{ $type := .Level }}
+{{ $tmp := newScratch }}
+{{ $tmp.Set "size" "sm" }}
+
+{{ if (eq $type 1) }}
+  {{ $tmp.Set "size" "2xl" }}
+{{ else if (eq $type 2) }}
+  {{ $tmp.Set "size" "xl" }}
+{{ else if (eq $type 3) }}
+  {{ $tmp.Set "size" "lg" }}
+{{ else if (eq $type 4) }}
+  {{ $tmp.Set "size" "md" }}
+{{ else if (eq $type 5) }}
+  {{ $tmp.Set "size" "sm" }}
+{{ else if (eq $type 6) }}
+  {{ $tmp.Set "size" "xs" }}
+{{ end }}
+
+<h{{ .Level }} id="{{ .Anchor }}" class="ds-heading" data-size="{{ $tmp.Get "size" }}">
+  <a href="#{{ .Anchor }}" class="anchor ds-link"><span>#</span></a>
+  {{ .Text }}
+</h{{ .Level }}>

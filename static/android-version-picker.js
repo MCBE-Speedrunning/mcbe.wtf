@@ -164,26 +164,28 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
           ${Object.entries(groupedByMajorMinor)
             .map(
               ([titleVersion, versions]) => `
-                <details${
+                <details class="ds-details" data-color="neutral" ${
                   Object.keys(groupedByMajorMinor).length === 1 ? " open" : ""
                 }>
                   <summary>${titleVersion}</summary>
-                  ${versions
-                    .map(
-                      (p) => `
-                        <h3>${p.version_name}</h3>
-                        <p>${p.beta ? "Beta version" : ""}</p>
-                        <ul>
-                          ${Object.entries(p.codes)
-                            .map(
-                              ([arch, version]) =>
-                                `<li>${arch}: ${version}</li>`,
-                            )
-                            .join("")}
-                        </ul>
-                  `,
-                    )
-                    .join("")}
+                  <div>
+                    ${versions
+                      .map(
+                        (p) => `
+                          <h3>${p.version_name}</h3>
+                          <p>${p.beta ? "Beta version" : ""}</p>
+                          <ul>
+                            ${Object.entries(p.codes)
+                              .map(
+                                ([arch, version]) =>
+                                  `<li>${arch}: ${version}</li>`,
+                              )
+                              .join("")}
+                          </ul>
+                    `,
+                      )
+                      .join("")}
+                </div>
                 </details>
                 `,
             )
