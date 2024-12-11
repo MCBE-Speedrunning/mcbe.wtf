@@ -76,6 +76,10 @@ nav ul li a {
   }
 }
 
+.mcbe-site-title {
+  margin-bottom: var(--ds-spacing-2);
+}
+
 mcbe-theme-switch div {
   margin-top: var(--ds-spacing-4);
   .ds-button {
