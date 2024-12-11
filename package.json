@@ -10,9 +10,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@digdir/designsystemet-css": "1.0.0-next.40"
+    "@digdir/designsystemet-css": "1.0.0-next.41"
   },
   "devDependencies": {
-    "@digdir/designsystemet": "1.0.0-next.40"
+    "@digdir/designsystemet": "1.0.0-next.41"
   }
 }

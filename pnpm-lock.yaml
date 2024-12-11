@@ -9,12 +9,12 @@ importers:
   .:
     dependencies:
       '@digdir/designsystemet-css':
-        specifier: 1.0.0-next.40
-        version: 1.0.0-next.40
+        specifier: 1.0.0-next.41
+        version: 1.0.0-next.41
     devDependencies:
       '@digdir/designsystemet':
-        specifier: 1.0.0-next.40
-        version: 1.0.0-next.40(prettier@3.4.2)
+        specifier: 1.0.0-next.41
+        version: 1.0.0-next.41(prettier@3.4.2)
 
 packages:
 
@@ -215,11 +215,11 @@ packages:
     peerDependencies:
       commander: ~12.1.0
 
-  '@digdir/designsystemet-css@1.0.0-next.40':
-    resolution: {integrity: sha512-880SQs0hFF6J6nxjrEalgbGHtJ8SkPLX2IDl1f+Gn/WfImGniews7A0ilI7aotld81oEHnkgZTOT+721FC/TRw==}
+  '@digdir/designsystemet-css@1.0.0-next.41':
+    resolution: {integrity: sha512-jPG+LpJ1fJDQAeKFCJqHPW8nBPUVuNSNr+vy9OweuC6LDjgFxVLVwBh11Y2bWoOmUkVGrQAdnWaNcqwDZSvxgw==}
 
-  '@digdir/designsystemet@1.0.0-next.40':
-    resolution: {integrity: sha512-/dfqr+1vQctEctYOFDhO4ZvoaJu+xhD0Izu33KMIiqnEDIDlXW2ZpaImWFYTi2Ok9P7vFDdxbJ65WvsncbIQKQ==}
+  '@digdir/designsystemet@1.0.0-next.41':
+    resolution: {integrity: sha512-Fl9TczHZ64YBQIMsa3Tp+EpUCzU/qvr1J3x6kO5mVfky6WFtM55iZKXl1Cd0WFTAH1PE7YXpJz99/53dOk3Vew==}
     hasBin: true
 
   '@isaacs/cliui@8.0.2':
@@ -1434,9 +1434,9 @@ snapshots:
     dependencies:
       commander: 12.1.0
 
-  '@digdir/designsystemet-css@1.0.0-next.40': {}
+  '@digdir/designsystemet-css@1.0.0-next.41': {}
 
-  '@digdir/designsystemet@1.0.0-next.40(prettier@3.4.2)':
+  '@digdir/designsystemet@1.0.0-next.41(prettier@3.4.2)':
     dependencies:
       '@adobe/leonardo-contrast-colors': 1.0.0
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)

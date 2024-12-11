@@ -85,6 +85,7 @@ class McbeCalculatorRsElement extends HTMLElement {
     this.#styles = document.createElement("style");
     this.#details = document.createElement("details");
     this.#details.className = "ds-details";
+    this.#details.dataset.color = "accent";
     this.#root.appendChild(this.#styles);
     this.#root.appendChild(this.#details);
     this.#details.open = true;

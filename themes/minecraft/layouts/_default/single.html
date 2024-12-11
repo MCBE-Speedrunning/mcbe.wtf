@@ -1,6 +1,27 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <nav class="ds-breadcrumbs" aria-label="You are here:">
+    <ol>
+      {{- range .Ancestors.Reverse }}
+          <li><a class="ds-link" href="{{ .RelPermalink }}">
+            {{ if .IsHome }}
+              Home
+            {{ else }}
+              {{ (or .Title (title .Section)) }}
+            {{ end }}
+          </a></li>
+      {{- end }}
+      {{- with .Title }}
+        <li>
+          {{ . }}
+        </li>
+      {{- end }}
+    </ol>
+  </nav>
 
-  {{ .Content }}
+  <h1 class="ds-heading" data-size="2xl">{{ .Title }}</h1>
+
+  <div class="mcbe-content">
+    {{ .Content }}
+  </div>
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

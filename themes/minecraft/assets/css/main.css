@@ -64,6 +64,18 @@ nav ul li a {
   gap: var(--ds-spacing-4);
 }
 
+.mcbe-content {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-top: var(--ds-spacing-4);
+    margin-bottom: var(--ds-spacing-4);
+  }
+}
+
 mcbe-theme-switch div {
   margin-top: var(--ds-spacing-4);
   .ds-button {

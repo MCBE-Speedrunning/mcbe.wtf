@@ -167,7 +167,7 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
           ${Object.entries(groupedByMajorMinor)
             .map(
               ([titleVersion, versions]) => `
-                <details class="ds-details" data-color="neutral" ${
+                <details class="ds-details" data-color="accent" ${
                   Object.keys(groupedByMajorMinor).length === 1 ? " open" : ""
                 }>
                   <summary>${titleVersion}</summary>

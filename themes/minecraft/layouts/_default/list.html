@@ -1,8 +1,10 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1 class="ds-heading" data-size="2xl">{{ .Title }}</h1>
   {{ .Content }}
-  {{ range (where .RegularPages "LinkTitle" "not in" "") }}
-    <h2><a class="ds-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+  {{ range (where .RegularPages "LinkTitle" "not in" (slice "" "Page not found")) }}
+      <h2 class="ds-heading" data-size="xl">
+        <a href="{{ .RelPermalink }}" class="ds-link">{{ .LinkTitle }}</a>
+      </h2>
+      <p>{{ .Summary }}</p>
   {{ end }}
 {{ end }}
