@@ -1,9 +1,9 @@
 html[data-color-scheme="dark"] {
-  background-color: var(--ds-color-brand3-border-subtle);
+  background-color: var(--ds-color-brand3-base-default);
 }
 
 html[data-color-scheme="dark"] body {
-  background-color: var(--ds-color-brand3-border-subtle);
+  background-color: var(--ds-color-brand3-base-default);
 }
 
 html {
