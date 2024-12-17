@@ -1,8 +1,9 @@
-baseURL = 'https://mcbe.wtf/'
 languageCode = 'en-us'
 title = 'Minecraft Bedrock Speedrunning'
 theme = "minecraft"
 copyright = 'Copyright @2024 Minecraft Speedrunning.'
+enableGitInfo = true
+enableRobotsTXT = true
 
 [taxonomies]
   tag = 'tags'

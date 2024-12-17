@@ -3,6 +3,9 @@
 {{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
   <meta name="description" content="{{ trim . "\n\r\t " }}">
 {{- end }}
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
 {{ template "_internal/opengraph.html" . }}
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
