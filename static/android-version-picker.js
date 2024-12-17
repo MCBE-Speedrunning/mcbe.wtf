@@ -175,7 +175,7 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
                     ${versions
                       .map(
                         (p) => `
-                          <h3 class="ds-heading" data-size="lg">${p.version_name}</h3>
+                          <h3 class="ds-heading" data-size="md">${p.version_name}</h3>
                           ${p.beta ? '<span class="ds-tag" data-color="brand2">Beta version</span>' : ""}
                           <ul>
                             ${Object.entries(p.codes)

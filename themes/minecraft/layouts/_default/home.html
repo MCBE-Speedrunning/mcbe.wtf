@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range (where site.RegularPages "LinkTitle" "not in" (slice "" "Page not found")) }}
-      <h2 class="ds-heading" data-size="xl">
+      <h2 class="ds-heading" data-size="lg">
         <a href="{{ .RelPermalink }}" class="ds-link">{{ .LinkTitle }}</a>
       </h2>
       <p>{{ .Summary }}</p>
