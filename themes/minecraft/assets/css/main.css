@@ -88,6 +88,15 @@ footer {
   }
 }
 
+/* This is really only targeting the heading on the homepage of the rules repo,
+ * which shouldn't be concerned (too much) with styling */
+.mcbe-content h1[align="center"] {
+  font-size: var(--ds-heading-xl-font-size);
+  font-weight: var(--ds-heading-xl-font-weight);
+  letter-spacing: var(--ds-heading-xl-letter-spacing);
+  line-height: var(--ds-heading-xl-line-height);
+}
+
 .mcbe-site-title {
   margin-bottom: var(--ds-spacing-2);
 }

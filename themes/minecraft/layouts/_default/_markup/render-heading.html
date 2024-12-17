@@ -17,6 +17,9 @@
 {{ end }}
 
 <h{{ .Level }} id="{{ .Anchor }}" class="ds-heading" data-size="{{ $tmp.Get "size" }}">
-  <a href="#{{ .Anchor }}" class="anchor ds-link"><span>#</span></a>
+  <!-- There's really only one h1 heading on each page, no need to link directly too it usually-->
+  {{ if (ne $type 1) }}
+    <a href="#{{ .Anchor }}" class="anchor ds-link"><span>#</span></a>
+  {{ end }}
   {{ .Text }}
 </h{{ .Level }}>
