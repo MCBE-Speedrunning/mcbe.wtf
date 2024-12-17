@@ -3,16 +3,22 @@ Renders a menu for the given menu ID.
 
 @context {page} page The current page.
 @context {string} menuID The menu ID.
+@context {string} baseUrl The menu ID.
 
 @example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 */}}
 
 {{- $page := .page }}
 {{- $menuID := .menuID }}
+{{- $baseUrl := .page.Site.BaseURL }}
 
 {{- with index site.Menus $menuID }}
-  <nav>
-    <ul>
+  <nav class="mcbe-navbar">
+    <div class="mcbe-banner">
+      <img src="{{ $baseUrl }}banner.png" height="50px" width="auto" />
+      <span class="mcbe-banner-title ds-heading" data-size="2xs">Minecraft Bedrock Speedrunning</span>
+    </div>
+    <ul class="mcbe-navbar-menu">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
   </nav>

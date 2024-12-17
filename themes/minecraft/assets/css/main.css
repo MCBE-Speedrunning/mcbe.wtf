@@ -18,7 +18,12 @@ html body {
 body {
   line-height: 1.5;
   margin: 1rem;
+}
+
+main {
   max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
@@ -31,21 +36,28 @@ footer {
   margin-top: 1rem;
 }
 
-nav {
-  display: block;
+.mcbe-navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
-nav ul {
+.mcbe-navbar ul {
   list-style: none;
 }
 
-nav ul li {
+.mcbe-navbar ul li {
   display: inline;
   padding: 0px 8px;
 }
 
-nav ul li a {
+.mcbe-navbar ul li a {
   display: inline;
+}
+
+.mcbe-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-spacing-2);
 }
 
 .highlight {
@@ -84,5 +96,15 @@ mcbe-theme-switch div {
   margin-top: var(--ds-spacing-4);
   .ds-button {
     text-transform: capitalize;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcbe-banner-title {
+    display: none;
+  }
+  .mcbe-navbar {
+    flex-direction: column;
+    align-items: center;
   }
 }
