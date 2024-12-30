@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Mojangles MCBE";
+    src: url("/fonts/minecraftfont.woff") format("woff");
+}
+
 html[data-color-scheme="dark"] {
   --ds-color-brand3-border-subtle: #6a431f;
   --ds-color-accent-text-subtle: #aadb74;
@@ -11,6 +16,7 @@ html[data-color-scheme="dark"] body {
 html {
   background-color: var(--ds-color-brand3-background-subtle);
   scroll-behavior: smooth;
+  font-family: "Mojangles MCBE", serif;
 }
 
 html body {
