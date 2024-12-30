@@ -10,3 +10,15 @@
     {{- end }}
   {{- end }}
 {{ end }}
+{{ $f := slice "fonts/Minecraft-Seven_v2.woff2" }}
+{{ range $f }}
+  {{- with resources.Get . }}
+    <link
+      rel="preload"
+      href="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+      as="font"
+      type="{{ .MediaType }}"
+      crossorigin="anonymous" />
+  {{ end }}
+{{ end }}

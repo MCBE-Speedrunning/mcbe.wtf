@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Mojangles MCBE";
-    src: url("/fonts/minecraftfont.woff") format("woff");
+    src: url("/fonts/Minecraft-Seven_v2.woff2") format("woff2");
 }
 
 html[data-color-scheme="dark"] {
@@ -16,7 +16,6 @@ html[data-color-scheme="dark"] body {
 html {
   background-color: var(--ds-color-brand3-background-subtle);
   scroll-behavior: smooth;
-  font-family: "Mojangles MCBE", serif;
 }
 
 html body {
@@ -84,16 +83,13 @@ footer {
   gap: var(--ds-spacing-4);
 }
 
-.mcbe-content {
-  & h1,
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
-    margin-top: var(--ds-spacing-4);
-    margin-bottom: var(--ds-spacing-4);
-  }
+.ds-heading {
+  font-family: "Mojangles MCBE", serif;
+}
+
+.mcbe-content .ds-heading {
+  margin-top: var(--ds-spacing-4);
+  margin-bottom: var(--ds-spacing-4);
 }
 
 /* This is really only targeting the heading on the homepage of the rules repo,
