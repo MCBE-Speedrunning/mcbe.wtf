@@ -9,17 +9,14 @@ importers:
   .:
     dependencies:
       '@digdir/designsystemet-css':
-        specifier: 1.0.0-next.41
-        version: 1.0.0-next.41
+        specifier: 1.0.0-next.44
+        version: 1.0.0-next.44
     devDependencies:
       '@digdir/designsystemet':
-        specifier: 1.0.0-next.41
-        version: 1.0.0-next.41(prettier@3.4.2)
+        specifier: 1.0.0-next.44
+        version: 1.0.0-next.44(prettier@3.4.2)
 
 packages:
-
-  '@adobe/leonardo-contrast-colors@1.0.0':
-    resolution: {integrity: sha512-a4mD0JZ1zNu2wIem/vWJqdaiuQZgxwOph/gpHA75mlXcs6iiIQx9G+W0jtssRFgdYYAi/ceQYOlYwiSQj1AUCw==}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -215,11 +212,11 @@ packages:
     peerDependencies:
       commander: ~12.1.0
 
-  '@digdir/designsystemet-css@1.0.0-next.41':
-    resolution: {integrity: sha512-jPG+LpJ1fJDQAeKFCJqHPW8nBPUVuNSNr+vy9OweuC6LDjgFxVLVwBh11Y2bWoOmUkVGrQAdnWaNcqwDZSvxgw==}
+  '@digdir/designsystemet-css@1.0.0-next.44':
+    resolution: {integrity: sha512-qrmClwLQdmRg6+c0oXkR7N3GXKH6IWHcluayL/M83fxjxeZhJ9x2bkuwguH5fY1hDnAy5qQFydnTdmClm0uf8g==}
 
-  '@digdir/designsystemet@1.0.0-next.41':
-    resolution: {integrity: sha512-Fl9TczHZ64YBQIMsa3Tp+EpUCzU/qvr1J3x6kO5mVfky6WFtM55iZKXl1Cd0WFTAH1PE7YXpJz99/53dOk3Vew==}
+  '@digdir/designsystemet@1.0.0-next.44':
+    resolution: {integrity: sha512-1aR1QHKmjQ8fkrhq6DjL5MFWKc+pjFInSeHxvHjq1EICgwcjyyeL1BOxpbnNrFQUq4HDC99UsR7a4Ybotcc0lQ==}
     hasBin: true
 
   '@isaacs/cliui@8.0.2':
@@ -383,12 +380,6 @@ packages:
   ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
     engines: {node: '>=8'}
-
-  ciebase@0.1.1:
-    resolution: {integrity: sha512-KEnf/WVT5E+Gn+LsfMHGJFATltSOeW0qm7dpzQYL/Qe5PEpyTM+UI5bMoBo16FE81zMpu+U6032USTP6Cz1XNA==}
-
-  ciecam02@0.4.6:
-    resolution: {integrity: sha512-nh/Kl8s5lgtyEl7lA381JFinLhgUwDhJaAVgbVx2BaiiJIzJLumQvuFXwdS76tSch7jDjWejP+MtKYCCEk/brg==}
 
   clone-deep@4.0.1:
     resolution: {integrity: sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==}
@@ -591,9 +582,6 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hsluv@0.1.0:
-    resolution: {integrity: sha512-ERcanKLAszD2XN3Vh5r5Szkrv9q0oSTudmP0rkiKAGM/3NMc9FLmMZBB7TSqTaXJfSDBOreYTfjezCOYbRKqlw==}
-
   hsluv@1.0.1:
     resolution: {integrity: sha512-zCaFTiDqBLQjCCFBu0qg7z9ASYPd+Bxx2GDCVZJsnehjK80S+jByqhuFz0pCd2Aw3FSKr18AWbRlwnKR0YdizQ==}
 
@@ -785,9 +773,6 @@ packages:
   mkdirp@0.5.6:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
     hasBin: true
-
-  mout@0.11.1:
-    resolution: {integrity: sha512-pK9VNiLE3QgGBrC/3ICAscwOLU7oTNeK2l32uqNAioBYtB2tQAfSsGDNChUlk7CP23126mc5lUt6+na9FlN8JA==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -1148,14 +1133,6 @@ packages:
 
 snapshots:
 
-  '@adobe/leonardo-contrast-colors@1.0.0':
-    dependencies:
-      apca-w3: 0.1.9
-      chroma-js: 2.6.0
-      ciebase: 0.1.1
-      ciecam02: 0.4.6
-      hsluv: 0.1.0
-
   '@ampproject/remapping@2.3.0':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
@@ -1434,11 +1411,10 @@ snapshots:
     dependencies:
       commander: 12.1.0
 
-  '@digdir/designsystemet-css@1.0.0-next.41': {}
+  '@digdir/designsystemet-css@1.0.0-next.44': {}
 
-  '@digdir/designsystemet@1.0.0-next.41(prettier@3.4.2)':
+  '@digdir/designsystemet@1.0.0-next.44(prettier@3.4.2)':
     dependencies:
-      '@adobe/leonardo-contrast-colors': 1.0.0
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@tokens-studio/sd-transforms': 1.2.2(style-dictionary@4.2.0(prettier@3.4.2))
       apca-w3: 0.1.9
@@ -1622,15 +1598,6 @@ snapshots:
   chroma-js@2.6.0: {}
 
   ci-info@3.9.0: {}
-
-  ciebase@0.1.1:
-    dependencies:
-      mout: 0.11.1
-
-  ciecam02@0.4.6:
-    dependencies:
-      ciebase: 0.1.1
-      mout: 0.11.1
 
   clone-deep@4.0.1:
     dependencies:
@@ -1828,8 +1795,6 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hsluv@0.1.0: {}
-
   hsluv@1.0.1: {}
 
   hyperdyperid@1.2.0: {}
@@ -2011,8 +1976,6 @@ snapshots:
   mkdirp@0.5.6:
     dependencies:
       minimist: 1.2.8
-
-  mout@0.11.1: {}
 
   ms@2.1.3: {}
 

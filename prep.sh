@@ -9,9 +9,9 @@ pnpm exec designsystemet tokens create \
 	--neutral-color "#0d0d0d" \
 	--support-colors "brand1:#bb5f61" "brand2:#68dfd5" "brand3:#6a431f" \
 	--theme "minecraft" \
-	--write "./themes/minecraft/design-tokens"
+	--out-dir "./themes/minecraft/design-tokens"
 
 pnpm exec designsystemet tokens build \
 	--tokens "./themes/minecraft/design-tokens" \
-	--out "./themes/minecraft/assets/designsystemet-minecraft"
+	--out-dir "./themes/minecraft/assets/designsystemet-minecraft"
 
