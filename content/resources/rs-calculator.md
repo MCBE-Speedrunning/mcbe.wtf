@@ -16,7 +16,7 @@ coordinates or further to unload the falling block when you die)
 The last 4 are diagonal coordinates (you have to go to those coordinates
 or further to unload the falling block when u die)
 
-<form class="rs-calc">
+<form class="rs-calc mcbe-stack" data-size="4" data-direction="column">
     <label class="ds-label">
         Spawn X:
         <input type="number" name="spawn-x" class="ds-input" />
