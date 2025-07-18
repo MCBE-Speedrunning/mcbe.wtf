@@ -114,4 +114,5 @@ Banned Players
 - [@SimenSam](https://www.speedrun.com/users/SimenSam) (Stolen run from [@kobra](https://www.speedrun.com/users/kobra))
 - [@GabLiterallyCrazy](https://www.speedrun.com/users/GabLiterallyCrazy) (Spliced runs)
 - [@HarubouRTA](https://www.speedrun.com/users/HarubouRTA) (Spliced RSG run)
+- [@HaydenCoolBoi](https://www.speedrun.com/users/HaydenCoolBoi) (Multiple suspected spliced runs; failure to provide substantial evidence of claimed submissions; consistently uncooperative)
 
