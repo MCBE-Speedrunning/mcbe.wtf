@@ -115,4 +115,5 @@ Banned Players
 - [@GabLiterallyCrazy](https://www.speedrun.com/users/GabLiterallyCrazy) (Spliced runs)
 - [@HarubouRTA](https://www.speedrun.com/users/HarubouRTA) (Spliced RSG run)
 - [@HaydenCoolBoi](https://www.speedrun.com/users/HaydenCoolBoi) (Multiple suspected spliced runs; failure to provide substantial evidence of claimed submissions; consistently uncooperative)
+- [@RKY\_01](https://www.speedrun.com/users/RKY_01) (Spliced RS all ores run)
 
