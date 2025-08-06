@@ -17,6 +17,7 @@ To add a player to the list get in contact with
 Players Worthy of Doubt
 
 - [@Sharks332](https://www.speedrun.com/users/Sharks332) (Participated in a faked run with [@ShiGame](https://www.speedrun.com/users/ShiGame), did not cheat himself)
+- [@Moonstar0128](https://www.speedrun.com/users/Moonstar0128) (Participated in a faked run with [@Twinkle_Star](https://www.speedrun.com/users/Twinkle_Star))
 - [@Dimondme8](https://www.speedrun.com/users/Dimondme8) (Potential splicing), required to submit better quality video
 - [@7H3](https://www.speedrun.com/users/7H3) (Faked runs in Gran Turismo 4)
 - [@Noobnubboi](https://www.speedrun.com/users/Noobnubboi) (Potential splicing) This run
