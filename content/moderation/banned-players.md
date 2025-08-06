@@ -116,4 +116,5 @@ Banned Players
 - [@HaydenCoolBoi](https://www.speedrun.com/users/HaydenCoolBoi) (Multiple suspected spliced runs; failure to provide substantial evidence of claimed submissions; consistently uncooperative)
 - [@RKY\_01](https://www.speedrun.com/users/RKY_01) (Spliced RS all ores run)
 - [@lv114514](https://www.speedrun.com/users/lv114514) (Cheated SS run)
+- [@Twinkle_Star](https://www.speedrun.com/users/Twinkle_Star) (Game manipulation in RSG used to gain an unfair advantage in an otherwise random run)
 
