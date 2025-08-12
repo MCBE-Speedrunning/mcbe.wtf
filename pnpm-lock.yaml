@@ -9,12 +9,12 @@ importers:
   .:
     dependencies:
       '@digdir/designsystemet-css':
-        specifier: 1.1.9
-        version: 1.1.9
+        specifier: 1.1.10
+        version: 1.1.10
     devDependencies:
       '@digdir/designsystemet':
-        specifier: 1.1.9
-        version: 1.1.9
+        specifier: 1.1.10
+        version: 1.1.10
 
 packages:
 
@@ -35,12 +35,12 @@ packages:
     peerDependencies:
       commander: ~14.0.0
 
-  '@digdir/designsystemet-css@1.1.9':
-    resolution: {integrity: sha512-n0bjHpvrTGJ3VoWx82VA8FbtMUv4jgIesvSo1j/7Nzis/1GwhHu+SIQ1x3Ozv3u++mGd3QrAPXMZF6rjuaU6kA==}
+  '@digdir/designsystemet-css@1.1.10':
+    resolution: {integrity: sha512-Xg2R7u9FyQ9bj0J4oA6pP09PVmU1utjrh+PKLoOpzYIPycKoH0BAUL6Xh7+4VtuhuGW5WttOB/4f/3aN2xqLnw==}
 
-  '@digdir/designsystemet@1.1.9':
-    resolution: {integrity: sha512-Kxwx1tLvr/Dh8BoDDLhElHesSgmTAb9/2egKH4u2qIzB0rhLygOCDg7ljGZ/SqG0dzgEs+v8lp1fbFLfq3spUQ==}
-    engines: {node: '>=22.17.0'}
+  '@digdir/designsystemet@1.1.10':
+    resolution: {integrity: sha512-EkVx+0t5FJDHWDhET5MH+8E92ihQcPDl8JnuGvy9hHPVJ8tC7ezxTEM/g+4qfGCBiT6w62P52QNsNZ/SLR93iQ==}
+    engines: {node: '>=22.18.0'}
     hasBin: true
 
   '@isaacs/cliui@8.0.2':
@@ -65,8 +65,8 @@ packages:
     peerDependencies:
       tslib: '2'
 
-  '@jsonjoy.com/json-pack@1.8.0':
-    resolution: {integrity: sha512-paJGjyBTRzfgkqhIyer992g21aSKuu9h//zGS7aqm795roD6VYFf6iU9NYua1Bndmh/NRPkjtm9+hEPkK0yZSw==}
+  '@jsonjoy.com/json-pack@1.10.0':
+    resolution: {integrity: sha512-PMOU9Sh0baiLZEDewwR/YAHJBV2D8pPIzcFQSU7HQl/k/HNCDyVfO1OvkyDwBGp4dPtvZc7Hl9FFYWwTP1CbZw==}
     engines: {node: '>=10.0'}
     peerDependencies:
       tslib: '2'
@@ -108,8 +108,8 @@ packages:
   '@tokens-studio/types@0.5.2':
     resolution: {integrity: sha512-rzMcZP0bj2E5jaa7Fj0LGgYHysoCrbrxILVbT0ohsCUH5uCHY/u6J7Qw/TE0n6gR9Js/c9ZO9T8mOoz0HdLMbA==}
 
-  '@types/node@22.17.0':
-    resolution: {integrity: sha512-bbAKTCqX5aNVryi7qXVMi+OkB3w/OyblodicMbvE38blyAz7GxXf6XYhklokijuPwwVg9sDLKRxt0ZHXQwZVfQ==}
+  '@types/node@22.17.1':
+    resolution: {integrity: sha512-y3tBaz+rjspDTylNjAX37jEC3TETEFGNJL6uQDxwF9/8GLLIjW1rvVHlynyuUKMnMr1Roq8jOv3vkopBjC4/VA==}
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -448,8 +448,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  jsonfile@6.1.0:
-    resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+  jsonfile@6.2.0:
+    resolution: {integrity: sha512-FGuPw30AdOIUTRMC2OMRtQV+jkVj2cfPqSeWXv1NEAJ1qZ5zb1X6z1mFhbfOB/iy3ssJCD+3KuZ8r8C3uVFlAg==}
 
   jsonify@0.0.1:
     resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}
@@ -691,8 +691,8 @@ packages:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
 
-  thingies@1.21.0:
-    resolution: {integrity: sha512-hsqsJsFMsV+aD4s3CWKk85ep/3I9XzYV/IXaSouJMYIoDlgyi11cBhsqYe9/geRfB0YIikBQg6raRaM+nIMP9g==}
+  thingies@2.5.0:
+    resolution: {integrity: sha512-s+2Bwztg6PhWUD7XMfeYm5qliDdSiZm7M7n8KjTkIsm3l/2lgVRc2/Gx/v+ZX8lT4FMA+i8aQvhcWylldc+ZNw==}
     engines: {node: '>=10.18'}
     peerDependencies:
       tslib: ^2
@@ -754,19 +754,19 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  yaml@2.8.0:
-    resolution: {integrity: sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==}
+  yaml@2.8.1:
+    resolution: {integrity: sha512-lcYcMxX2PO9XMGvAJkJ3OsNMw+/7FKes7/hgerGUYWIoWu5j/+YQqcZr5JnPZWzOsEBgMbSbiSTn/dv/69Mkpw==}
     engines: {node: '>= 14.6'}
     hasBin: true
 
-  zod-validation-error@3.5.3:
-    resolution: {integrity: sha512-OT5Y8lbUadqVZCsnyFaTQ4/O2mys4tj7PqhdbBCp7McPwvIEKfPtdA6QfPeFQK2/Rz5LgwmAXRJTugBNBi0btw==}
+  zod-validation-error@4.0.1:
+    resolution: {integrity: sha512-F3rdaCOHs5ViJ5YTz5zzRtfkQdMdIeKudJAoxy7yB/2ZMEHw73lmCAcQw11r7++20MyGl4WV59EVh7A9rNAyog==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
 
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+  zod@4.0.17:
+    resolution: {integrity: sha512-1PHjlYRevNxxdy2JZ8JcNAw7rX8V9P1AKkP+x/xZfxB0K5FYfuV+Ug6P/6NVSR2jHQ+FzDDoDHS04nYUsOIyLQ==}
 
 snapshots:
 
@@ -803,9 +803,9 @@ snapshots:
     dependencies:
       commander: 14.0.0
 
-  '@digdir/designsystemet-css@1.1.9': {}
+  '@digdir/designsystemet-css@1.1.10': {}
 
-  '@digdir/designsystemet@1.1.9':
+  '@digdir/designsystemet@1.1.10':
     dependencies:
       '@commander-js/extra-typings': 14.0.0(commander@14.0.0)
       '@tokens-studio/sd-transforms': 1.3.0(style-dictionary@5.0.1)
@@ -821,8 +821,8 @@ snapshots:
       postcss: 8.5.6
       ramda: 0.31.3
       style-dictionary: 5.0.1
-      zod: 3.25.76
-      zod-validation-error: 3.5.3(zod@3.25.76)
+      zod: 4.0.17
+      zod-validation-error: 4.0.1(zod@4.0.17)
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -845,13 +845,15 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@jsonjoy.com/json-pack@1.8.0(tslib@2.8.1)':
+  '@jsonjoy.com/json-pack@1.10.0(tslib@2.8.1)':
     dependencies:
       '@jsonjoy.com/base64': 1.1.2(tslib@2.8.1)
+      '@jsonjoy.com/buffers': 1.0.0(tslib@2.8.1)
+      '@jsonjoy.com/codegen': 1.0.0(tslib@2.8.1)
       '@jsonjoy.com/json-pointer': 1.0.1(tslib@2.8.1)
       '@jsonjoy.com/util': 1.9.0(tslib@2.8.1)
       hyperdyperid: 1.2.0
-      thingies: 1.21.0(tslib@2.8.1)
+      thingies: 2.5.0(tslib@2.8.1)
       tslib: 2.8.1
 
   '@jsonjoy.com/json-pointer@1.0.1(tslib@2.8.1)':
@@ -892,7 +894,7 @@ snapshots:
 
   '@tokens-studio/types@0.5.2': {}
 
-  '@types/node@22.17.0':
+  '@types/node@22.17.1':
     dependencies:
       undici-types: 6.21.0
 
@@ -1077,7 +1079,7 @@ snapshots:
     dependencies:
       at-least-node: 1.0.0
       graceful-fs: 4.2.11
-      jsonfile: 6.1.0
+      jsonfile: 6.2.0
       universalify: 2.0.1
 
   fs.realpath@1.0.0: {}
@@ -1229,7 +1231,7 @@ snapshots:
 
   json5@2.2.3: {}
 
-  jsonfile@6.1.0:
+  jsonfile@6.2.0:
     dependencies:
       universalify: 2.0.1
     optionalDependencies:
@@ -1247,7 +1249,7 @@ snapshots:
 
   memfs@4.36.0:
     dependencies:
-      '@jsonjoy.com/json-pack': 1.8.0(tslib@2.8.1)
+      '@jsonjoy.com/json-pack': 1.10.0(tslib@2.8.1)
       '@jsonjoy.com/util': 1.9.0(tslib@2.8.1)
       tree-dump: 1.0.3(tslib@2.8.1)
       tslib: 2.8.1
@@ -1322,7 +1324,7 @@ snapshots:
       semver: 7.7.2
       slash: 2.0.0
       tmp: 0.0.33
-      yaml: 2.8.0
+      yaml: 2.8.1
 
   path-is-absolute@1.0.1: {}
 
@@ -1474,7 +1476,7 @@ snapshots:
       '@bundled-es-modules/deepmerge': 4.3.1
       '@bundled-es-modules/glob': 10.4.2
       '@bundled-es-modules/memfs': 4.17.0
-      '@types/node': 22.17.0
+      '@types/node': 22.17.1
       '@zip.js/zip.js': 2.7.72
       chalk: 5.5.0
       change-case: 5.4.4
@@ -1490,7 +1492,7 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  thingies@1.21.0(tslib@2.8.1):
+  thingies@2.5.0(tslib@2.8.1):
     dependencies:
       tslib: 2.8.1
 
@@ -1559,10 +1561,10 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  yaml@2.8.0: {}
+  yaml@2.8.1: {}
 
-  zod-validation-error@3.5.3(zod@3.25.76):
+  zod-validation-error@4.0.1(zod@4.0.17):
     dependencies:
-      zod: 3.25.76
+      zod: 4.0.17
 
-  zod@3.25.76: {}
+  zod@4.0.17: {}
