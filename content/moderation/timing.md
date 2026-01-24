@@ -25,7 +25,7 @@ them first.
 ezRetime
 --------
 
-[ezRetime](https://ezretime.glitch.me/) is a tool developed by
+[ezRetime](https://sprinkzmc.com/ezretime/) is a tool developed by
 [SprinkzMC](https://www.speedrun.com/users/SprinkzMC) moderator for
 quickly retiming runs.
 
