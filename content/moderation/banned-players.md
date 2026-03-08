@@ -121,4 +121,5 @@ Banned Players
 - [@AR7AR7](https://www.speedrun.com/users/AR7AR7) (World creation
   splice)
 - [@Aws_3tac](https://www.speedrun.com/users/Aws_3tac) (alt of [@AR7AR7](https://www.speedrun.com/users/AR7AR7))
+- [@Aws_suny](https://www.speedrun.com/users/Aws_suny) (alt of [@AR7AR7](https://www.speedrun.com/users/AR7AR7))
 
