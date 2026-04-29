@@ -164,35 +164,38 @@ class McbeAndroidVersionPickerElement extends HTMLElement {
           return `${major}.${minor}`;
         });
         return `
-          ${Object.entries(groupedByMajorMinor)
-            .map(
-              ([titleVersion, versions]) => `
-                <details class="ds-details" data-color="accent" data-variant="tinted" ${
-                  Object.keys(groupedByMajorMinor).length === 1 ? " open" : ""
-                }>
-                  <summary>${titleVersion}</summary>
-                  <div>
-                    ${versions
-                      .map(
-                        (p) => `
-                          <h3 class="ds-heading" data-size="md">${p.version_name}</h3>
-                          ${p.beta ? '<span class="ds-tag" data-color="brand2">Beta version</span>' : ""}
-                          <ul>
-                            ${Object.entries(p.codes)
-                              .map(
-                                ([arch, version]) =>
-                                  `<li>${arch}: ${version}</li>`,
-                              )
-                              .join("")}
-                          </ul>
-                    `,
-                      )
-                      .join("")}
-                </div>
-                </details>
-                `,
-            )
-            .join("")}`;
+          <div class="ds-card">
+            ${Object.entries(groupedByMajorMinor)
+              .map(
+                ([titleVersion, versions]) => `
+                  <details class="ds-details" data-color="accent" data-variant="tinted" ${
+                    Object.keys(groupedByMajorMinor).length === 1 ? " open" : ""
+                  }>
+                    <summary>${titleVersion}</summary>
+                    <div>
+                      ${versions
+                        .map(
+                          (p) => `
+                            <h3 class="ds-heading" data-size="md">${p.version_name}</h3>
+                            ${p.beta ? '<span class="ds-tag" data-color="brand2">Beta version</span>' : ""}
+                            <ul>
+                              ${Object.entries(p.codes)
+                                .map(
+                                  ([arch, version]) =>
+                                    `<li>${arch}: ${version}</li>`,
+                                )
+                                .join("")}
+                            </ul>
+                      `,
+                        )
+                        .join("")}
+                    </div>
+                  </details>
+                  `,
+              )
+              .join("")}
+          </div>
+            `;
       }
     }
   }

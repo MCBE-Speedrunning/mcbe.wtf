@@ -1,11 +1,9 @@
 @font-face {
-    font-family: "Mojangles MCBE";
-    src: url("/fonts/Minecraft-Seven_v2.woff2") format("woff2");
+  font-family: "Mojangles MCBE";
+  src: url("/fonts/Minecraft-Seven_v2.woff2") format("woff2");
 }
 
 html[data-color-scheme="dark"] {
-  --ds-color-brand3-border-subtle: #6a431f;
-  --ds-color-accent-text-subtle: #aadb74;
   background-color: var(--ds-color-brand3-border-subtle);
 }
 
@@ -42,6 +40,10 @@ footer {
   border-top: 1px solid var(--ds-color-neutral-border-strong);
   margin-top: var(--ds-size-4);
   padding-top: var(--ds-size-4);
+}
+
+a {
+  border-radius: var(--ds-border-radius-md);
 }
 
 .mcbe-stack {
@@ -118,7 +120,7 @@ footer {
   margin-bottom: var(--ds-size-2);
 }
 
-mcbe-theme-switch div {
+mcbe-theme-switch fieldset {
   margin-top: var(--ds-size-4);
   .ds-button {
     text-transform: capitalize;

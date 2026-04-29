@@ -1,0 +1,34 @@
+{
+  "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
+  "outDir": "./design-tokens",
+  "themes": {
+    "minecraft": {
+      "colors": {
+        "main": {
+          "accent": "#aadb74"
+        },
+        "support": {
+          "brand1": "#bb5f61",
+          "brand2": "#68dfd5",
+          "brand3": "#6a431f"
+        },
+        "neutral": "#0d0d0d"
+      },
+      "overrides": {
+        "colors": {
+          "accent": {
+            "text-subtle": {
+              "dark": "#aadb74"
+            }
+          },
+          "brand3": {
+            "border-subtle": {
+              "dark": "#6a431f"
+            }
+          }
+        }
+      },
+      "borderRadius": 12
+    }
+  }
+}

@@ -14,10 +14,12 @@ class McbeThemeSwitchElement extends HTMLElement {
   }
 
   connectedCallback() {
-    this.#toggleGroupElement = document.createElement("div");
-    this.#toggleGroupElement.className = "ds-togglegroup";
-    this.#toggleGroupElement.role = "radiogroup";
-    this.#toggleGroupElement.tabIndex = "-1";
+    this.#toggleGroupElement = document.createElement("fieldset");
+    this.#toggleGroupElement.className = "ds-toggle-group";
+    this.#toggleGroupElement.addEventListener(
+      "change",
+      this.#changeTheme.bind(this),
+    );
 
     const theme = McbeThemeSwitchElement.#getThemeFromStorage();
     localStorage.setItem(McbeThemeSwitchElement.#themeKey, theme);
@@ -30,14 +32,18 @@ class McbeThemeSwitchElement extends HTMLElement {
       // https://github.com/digdir/designsystemet/pull/2827
       // McbeThemeSwitchElement.#contrastTheme,
     ]) {
-      const btn = document.createElement("button");
-      btn.className = "ds-button";
-      btn.dataset.value = colorScheme;
-      btn.dataset.variant = colorScheme === theme ? "primary" : "tertiary";
-      btn.textContent = colorScheme;
-      btn.addEventListener("click", this.#changeTheme.bind(this));
-      this.#colorSchemeButtons.push(btn);
-      this.#toggleGroupElement.appendChild(btn);
+      const label = document.createElement("label");
+      label.className = "ds-button";
+      label.dataset.variant = "tertiary";
+      label.textContent = colorScheme;
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = "colorscheme";
+      input.value = colorScheme;
+      input.checked = colorScheme === theme;
+      label.appendChild(input);
+      this.#colorSchemeButtons.push(label);
+      this.#toggleGroupElement.appendChild(label);
     }
 
     this.appendChild(this.#toggleGroupElement);
@@ -50,16 +56,11 @@ class McbeThemeSwitchElement extends HTMLElement {
   }
 
   /**
-   * @param {MouseEvent} event
+   * @param {ChangeEvent} event
    */
   #changeTheme(event) {
-    const theme = event.target.dataset.value;
+    const theme = event.target.value;
     document.querySelector("html").dataset.colorScheme = theme;
-    this.#colorSchemeButtons.forEach(
-      (btn) =>
-        (btn.dataset.variant =
-          btn.dataset.value === theme ? "primary" : "tertiary"),
-    );
     localStorage.setItem(McbeThemeSwitchElement.#themeKey, theme);
   }
 
