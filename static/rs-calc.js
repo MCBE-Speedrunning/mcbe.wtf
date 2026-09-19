@@ -75,6 +75,8 @@ class McbeCalculatorRsElement extends HTMLElement {
   #details;
   /** @type HTMLStyleElement */
   #styles;
+  /** @type HTMLElement */
+  #card;
 
   constructor() {
     super();
@@ -83,12 +85,15 @@ class McbeCalculatorRsElement extends HTMLElement {
   connectedCallback() {
     this.#root = this;
     this.#styles = document.createElement("style");
+    this.#card = document.createElement("div");
     this.#details = document.createElement("details");
+    this.#card.className = "ds-card";
     this.#details.className = "ds-details";
     this.#details.dataset.color = "accent";
     this.#details.dataset.variant = "tinted";
+    this.#card.appendChild(this.#details);
     this.#root.appendChild(this.#styles);
-    this.#root.appendChild(this.#details);
+    this.#root.appendChild(this.#card);
     this.#details.open = true;
     this.#styles.innerHTML = `p {
   margin-top: 0;
@@ -110,12 +115,12 @@ class McbeCalculatorRsElement extends HTMLElement {
     );
 
     if (Number.isNaN(spawnNumberX) || Number.isNaN(spawnNumberZ)) {
-      this.#details.style.display = "none";
+      this.#card.style.display = "none";
       return;
     }
 
     const result = calculateCoordinates(spawnNumberX, spawnNumberZ);
-    this.#details.style.display = "block";
+    this.#card.style.display = "block";
     this.#details.innerHTML = `
     <summary>Results</summary>
     <p>

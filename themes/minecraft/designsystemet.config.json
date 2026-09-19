@@ -4,14 +4,10 @@
   "themes": {
     "minecraft": {
       "colors": {
-        "main": {
-          "accent": "#aadb74"
-        },
-        "support": {
-          "brand1": "#bb5f61",
-          "brand2": "#68dfd5",
-          "brand3": "#6a431f"
-        },
+        "accent": "#aadb74",
+        "brand1": "#bb5f61",
+        "brand2": "#68dfd5",
+        "brand3": "#6a431f",
         "neutral": "#0d0d0d"
       },
       "overrides": {
