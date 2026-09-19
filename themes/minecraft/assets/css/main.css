@@ -1,6 +1,83 @@
+:root {
+  --mcbe-animation-delay-1: 0.5s;
+
+  @media (prefers-reduced-motion: reduce) {
+    --mcbe-animation-delay-1: 0s;
+  }
+}
+
 @font-face {
   font-family: "Mojangles MCBE";
   src: url("/fonts/Minecraft-Seven_v2.woff2") format("woff2");
+}
+
+/* Turn cross-document view transitions on and set types to slide */
+@view-transition {
+  navigation: auto;
+  types: slide;
+}
+
+/* Keyframes for all the animations */
+@keyframes slide-in-from-left {
+  from {
+    translate: -100vw 0;
+  }
+}
+@keyframes slide-in-from-right {
+  from {
+    translate: 100vw 0;
+  }
+}
+@keyframes slide-out-to-left {
+  to {
+    translate: -100vw 0;
+  }
+}
+@keyframes slide-out-to-right {
+  to {
+    translate: 100vw 0;
+  }
+}
+
+/* Determine what gets captured when the type is forwards or backwards */
+html:active-view-transition {
+  :root {
+    view-transition-name: none;
+  }
+  .mcbe-navbar {
+    view-transition-name: none;
+  }
+  main {
+    view-transition-name: mcbe-content;
+  }
+  footer {
+    view-transition-name: none;
+  }
+}
+
+/* Animation styles for forwards type only */
+html:active-view-transition-type(forwards) {
+  &::view-transition-old(mcbe-content) {
+    animation-name: slide-out-to-left;
+  }
+  &::view-transition-new(mcbe-content) {
+    animation-name: slide-in-from-right;
+  }
+}
+
+/* Animation styles for backwards type only */
+html:active-view-transition-type(backwards) {
+  &::view-transition-old(mcbe-content) {
+    animation-name: slide-out-to-right;
+  }
+  &::view-transition-new(mcbe-content) {
+    animation-name: slide-in-from-left;
+  }
+}
+
+/* Set custom duration on all view transitions */
+::view-transition-group(*) {
+  animation-duration: var(--mcbe-animation-delay-1);
 }
 
 html[data-color-scheme="dark"] {
@@ -18,6 +95,7 @@ html {
 
 html body {
   background-color: var(--ds-color-brand3-background-subtle);
+  transition: background var(--mcbe-animation-delay-1), color var(--mcbe-animation-delay-1), border var(--mcbe-animation-delay-1);
 }
 
 body {
@@ -25,24 +103,24 @@ body {
   margin: 1rem;
 }
 
-main {
+.mcbe-content {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
 }
 
-header {
+.mcbe-header {
   border-bottom: 1px solid var(--ds-color-neutral-border-strong);
   margin-bottom: 1rem;
 }
 
-footer {
+.mcbe-footer {
   border-top: 1px solid var(--ds-color-neutral-border-strong);
   margin-top: var(--ds-size-4);
   padding-top: var(--ds-size-4);
 }
 
-a {
+.ds-link {
   border-radius: var(--ds-border-radius-md);
 }
 
@@ -67,12 +145,12 @@ a {
   list-style: none;
 }
 
-.mcbe-navbar ul li {
+.mcbe-navbar .mcbe-navbar-menu li {
   display: inline;
   padding: 0px 8px;
 }
 
-.mcbe-navbar ul li a {
+.mcbe-navbar .mcbe-navbar-menu li .ds-link {
   display: inline;
 }
 
@@ -120,7 +198,7 @@ a {
   margin-bottom: var(--ds-size-2);
 }
 
-mcbe-theme-switch fieldset {
+mcbe-theme-switch .ds-toggle-group {
   margin-top: var(--ds-size-4);
   .ds-button {
     text-transform: capitalize;

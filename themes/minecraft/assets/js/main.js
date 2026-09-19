@@ -60,7 +60,9 @@ class McbeThemeSwitchElement extends HTMLElement {
    */
   #changeTheme(event) {
     const theme = event.target.value;
-    document.querySelector("html").dataset.colorScheme = theme;
+    document.startViewTransition(() => {
+      document.querySelector("html").dataset.colorScheme = theme;
+    });
     localStorage.setItem(McbeThemeSwitchElement.#themeKey, theme);
   }
 
@@ -117,6 +119,60 @@ class McbeCopyCodeElement extends HTMLElement {
       });
   }
 }
+
+function determineTransitionType(currentURL, destinationURL) {
+  // Find the index number of a page
+  function determinePageIndex(url) {
+    // Split the URL at the "/" character
+    const array = url.split("/");
+    return array.length;
+  }
+
+  // Get the page index of the current and destination URLs
+  const currentPageIndex = determinePageIndex(currentURL);
+  const destinationPageIndex = determinePageIndex(destinationURL);
+
+  // Return "forwards" or "backwards" depending on whether currentPageIndex
+  // is bigger or smaller than destinationPageIndex
+  if (currentPageIndex > destinationPageIndex) {
+    return "backwards";
+  } else if (currentPageIndex <= destinationPageIndex) {
+    return "forwards";
+  }
+};
+
+function pageswap(e) {
+  if (!e.viewTransition) return;
+  // Grab the old and new navigation entries on the outgoing page from the pageswap event object's
+  // activation property, pass these to the determineTransitionType() function to determine the type
+  const transitionType = determineTransitionType(
+    // Grab the current and destination URLs from the provided navigation entries
+    e.activation.from.url,
+    e.activation.entry.url,
+  );
+  // Add the type to the active ViewTransition via its types property
+  e.viewTransition.types.add(transitionType);
+}
+
+function pagereveal(e) {
+  if (!e.viewTransition) return;
+  // Grab the old and new navigation entries on the incoming page from the Navigation.activation
+  // object, pass these to the determineTransitionType() function to determine the type
+  const transitionType = determineTransitionType(
+    // Grab the current and destination URLs from the provided navigation entries
+    navigation.activation.from.url,
+    navigation.activation.entry.url,
+  );
+
+  // If the type is undefined, don't add anything to the transition types
+  if (transitionType !== undefined) {
+    // Add the type to the active ViewTransition via its types property
+    e.viewTransition.types.add(transitionType);
+  }
+}
+
+window.addEventListener("pageswap", pageswap);
+window.addEventListener("pagereveal", pagereveal);
 
 customElements.define(McbeThemeSwitchElement.tagName, McbeThemeSwitchElement);
 customElements.define(McbeCopyCodeElement.tagName, McbeCopyCodeElement);

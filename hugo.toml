@@ -1,4 +1,4 @@
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Minecraft Bedrock Speedrunning'
 theme = "minecraft"
 copyright = 'Copyright @2024 Minecraft Speedrunning.'
